@@ -1,0 +1,136 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block title %}Contact us{% endblock %}
+{% block head %}
+<style>
+.innerpage-banner {
+    background: url(/home/static/image/innerbg.jpg) no-repeat center;
+}
+</style>
+{% endblock %}
+{% include 'top_header.html' %}
+{% include 'nav.html' %}
+{% block content %}
+
+
+<!-- banner -->
+<div class="innerpage-banner" id="home">
+	<div class="inner-page-layer">
+	</div>
+</div>
+<!-- //banner -->
+
+<!-- Services -->
+<section class="services-inner py-5">
+	<div class="container py-md-3">
+		<h2 class="heading text-center mb-sm-5 mb-4">Services </h2>
+		<div class="row service-grids">
+			<div class="row col-lg-6 mb-5 padder-none">
+				<div class="col-sm-3 ser_icon">
+					<span class="icon bg1 mx-auto">
+						<span class="fa fa-heartbeat"></span>
+					</span>
+				</div>
+				<div class="col-sm-9 mt-sm-0 mt-3">
+					<h4>Root Canal and Teeth Whitening</h4>
+					<p class="">Quisque ac sapien quis orci pulvinar finibus quisn eu urna Quisque Suspendisse id felisut sed felise tincidunt finibus.
+					Nulla sed justo tellus. Donec et felis ante ipsum urna Quisque sed felis dolor.</p>
+				</div>
+			</div>
+			<div class="row col-lg-6 mb-sm-5 padder-none">
+				<div class="col-sm-9 text-sm-right">
+					<h4> Orthodontics and Dental Filling</h4>
+					<p class="">Quisque ac sapien quis orci pulvinar finibus quisn eu urna Quisque Suspendisse id felisut sed felise tincidunt finibus.
+					Nulla sed justo tellus. Donec et felis ante ipsum urna Quisque sed felis dolor.</p>
+				</div>
+				<div class="col-sm-3 mt-sm-0 mt-4 ser_icon ser-right">
+					<span class="icon bg2 mx-auto">
+						<span class="fa fa-stethoscope"></span>
+					</span>
+				</div>
+			</div>
+			<div class="row col-lg-6 mb-lg-0 mb-5 mt-sm-0 mt-5 padder-none">
+				<div class="col-sm-3 mb-sm-0 mb-4 ser_icon">
+					<span class="icon bg3 mx-auto">
+						<span class="fa fa-bullseye"></span>
+					</span>
+				</div>
+				<div class="col-sm-9">
+					<h4>Tooth Extraction Treatment</h4>
+					<p class="">Quisque ac sapien quis orci pulvinar finibus quisn eu urna Quisque Suspendisse id felisut sed felise tincidunt finibus.
+					Nulla sed justo tellus. Donec et felis ante ipsum urna Quisque sed felis dolor.</p>
+				</div>
+			</div>
+			<div class="row col-lg-6 padder-none">
+				<div class="col-sm-9 text-sm-right">
+					<h4>Daily Routine Check-up</h4>
+					<p class="">Quisque ac sapien quis orci pulvinar finibus quisn eu urna Quisque Suspendisse id felisut sed felise tincidunt finibus.
+					Nulla sed justo tellus. Donec et felis ante ipsum urna Quisque sed felis dolor.</p>
+				</div>
+				<div class="col-sm-3 mt-sm-0 mt-4 ser_icon ser-right">
+					<span class="icon bg4 mx-auto">
+						<span class="fa fa-user-md"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //Services -->
+
+
+<!-- services -->
+<section class="services py-5">
+	<div class="container py-lg-5">
+		<h3 class="heading text-center mb-5">What we do </h3>
+		<div class="row offer-grids">
+{#			<div class="col-lg-4 col-md-6">#}
+{#				<div class="ser1">#}
+{#					<div class="bg-layer">#}
+{#						<h4 class="">Digital X-Ray</h4>#}
+{#						<p class="mt-3">Definition Dental uses digital x-ray technology to help find, prevent and treat any damage or disease that is not visible to the naked eye. If you are new patient to Definition Dental, digital x-rays will be done to establish a baseline of your current oral health.</p>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+            {% for service in services %}
+			<div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+				<div class="ser2">
+					<div class="bg-layer">
+                        <a href="#gal5"><img src="{{service.image.url}}" alt="portfolio image" class="img-fluid"></a>
+						<h4 class="">{{ service.title }}</h4>
+						<p class="mt-3">{{ service.content }}</p>
+					</div>
+				</div>
+			</div>
+            {% endfor %}
+
+		</div>
+	</div>
+</section>
+<!-- //services -->
+
+<!-- join -->
+<section class="join py-5">
+	<div class="container py-lg-5 py-sm-3">
+		<div class="row join_grids">
+			<div class="col-lg-6">
+				<img src="images/b.jpg" class="img-fluid" alt="" />
+			</div>
+			<div class="col-lg-6">
+				<h4 class="mt-4">Make Your Appointment Today</h4>
+				<p class="py-sm-4 py-3">Suspendisse id felis sed felis tincidunt finibus. Nulla sed justo tellus. Donec ut felis ante. Quisque ac sapien quis orci pulvinar finibus quis eu urna. onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper Nullam dui mi.</p>
+				<p class="pb-3">Suspendisse id felis sed felis tincidunt finibus. Nulla sed justo tellus. Donec ut felis ante. Quisque ac sapien quis orci.</p>
+				<a class="btn btn-banner text-capitalize" href="#" role="button">Book Now</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //join -->
+
+
+{% endblock %}
+{% include 'footer.html' %}
+{% include 'copyright.html' %}

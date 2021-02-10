@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block title %}Contact us{% endblock %}
+{% block head %}
+<style>
+.innerpage-banner {
+    background: url(/home/static/image/innerbg.jpg) no-repeat center;
+}
+</style>
+{% endblock %}
+{% include 'top_header.html' %}
+{% include 'nav.html' %}
+{% block content %}
+    <!-- banner -->
+<div class="innerpage-banner" id="home">
+	<div class="inner-page-layer">
+	</div>
+</div>
+<!-- //banner -->
+
+<!-- contact -->
+<section class="mail pt-lg-5 pt-4">
+	<div class="container pt-lg-5">
+		<h2 class="heading text-center mb-sm-5 mb-4">Contact Us </h2>
+		<div class="row agileinfo_mail_grids">
+			<div class="col-lg-8 agileinfo_mail_grid_right">
+				<form action="#" method="post">
+                    {% csrf_token %}
+					<div class="row">
+						<div class="col-md-6 wthree_contact_left_grid pr-md-0">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" placeholder="Name" required="">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email" required="">
+							</div>
+						</div>
+						<div class="col-md-6 wthree_contact_left_grid">
+							<div class="form-group">
+								<input type="text" name="phone_no" class="form-control" placeholder="Phone Number" required="">
+							</div>
+							<div class="form-group">
+								<input type="text" name="subject" class="form-control" placeholder="Subject" required="">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea name="msg" placeholder="Message" class="form-control" required=""></textarea>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="submit-buttons">
+								<button type="submit" class="btn">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-lg-4 col-md-6 mt-lg-0 mt-4 contact-info">
+				<h4 class="mb-4">Address Information</h4>
+				<p><span class="fa mr-2 fa-map-marker"></span>118/24 Babu Mohalla Kaiser Ganj Ajmer <span>Rajasthan,India</span></p>
+				<p class="phone py-2"><span class="fa mr-2 fa-phone"></span>Phone : +91 8829893123 </p>
+				<p><span class="fa mr-2 fa-envelope"></span>Email : <a href="mailto:kapoordentalhub@gmail.com">kapoordentalhub@gmail.com</a></p>
+
+				<h4 class="my-4">Book Your Appointment</h4>
+				<p class="phone"><span class="fa mr-2 fa-phone"></span>Call us at +91 8829893123 </p>
+			</div>
+		</div>
+	</div>
+<!--	<div class="map mt-5">-->
+<!--		<iframe src="https://www.google.com/maps/embed/v1/place?q=%2011%2F24%20Kapoor%20Chambers%2C%20Krishna%20Bhawan%2C%20Babu%20Mohalla%2C%20Ajmer%2C%20Rajasthan%20305001&key=..."-->
+<!--			style="border:0"></iframe>-->
+<!--	</div>-->
+	<center>
+		<div class="mapouter"><div class="gmap_canvas"><iframe width="1080" height="517" id="gmap_canvas" src="https://maps.google.com/maps?q=%2011%2F24%20Kapoor%20Chambers%2C%20Krishna%20Bhawan%2C%20Babu%20Mohalla%2C%20Ajmer%2C%20Rajasthan%20305001&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://ytify.com">bandcamp downloader</a></div><style>.mapouter{position:relative;text-align:right;height:517px;width:1080px;}.gmap_canvas {overflow:hidden;background:none!important;height:517px;width:1080px;}</style></div>
+	</center>
+</section>
+<!-- //contact -->
+{% endblock %}
+{% include 'footer.html' %}
+{% include 'copyright.html' %}
+
